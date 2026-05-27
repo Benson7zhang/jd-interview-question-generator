@@ -1,0 +1,7 @@
+interface:
+  display_name: "JD 面试官模拟器"
+  short_description: "根据 JD 和项目经历模拟大厂技术面试"
+  default_prompt: "Use $jd-interview-question-generator to turn this JD or project experience into a realistic big-tech technical interview flow."
+
+policy:
+  allow_implicit_invocation: true
