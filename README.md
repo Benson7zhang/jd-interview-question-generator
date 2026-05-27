@@ -37,10 +37,18 @@ JD + Resume
 
 ## 安装
 
-推荐使用 `npx skills` 一键安装：
+推荐使用 `npx skills` 一键安装。
+
+Codex：
 
 ```bash
-npx skills add https://github.com/Benson7zhang/intern-interview-predictor -g --agent codex claude-code --skill intern-interview-predictor -y
+npx skills add git@github.com:Benson7zhang/intern-interview-predictor.git -g --agent codex --skill intern-interview-predictor -y
+```
+
+Claude Code：
+
+```bash
+npx skills add git@github.com:Benson7zhang/intern-interview-predictor.git -g --agent claude-code --skill intern-interview-predictor -y
 ```
 
 安装完成后，重启 Codex / Claude Code，让客户端重新加载 skills。
