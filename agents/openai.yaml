@@ -1,0 +1,7 @@
+interface:
+  display_name: "实习校招面试预测器"
+  short_description: "基于 JD 与简历重建招聘信号、预测面试问题和项目深挖"
+  default_prompt: "Use $intern-interview-predictor to analyze this JD and resume, reconstruct hiring signals, predict interview stages, generate evidence-based questions, and identify project authenticity risks."
+
+policy:
+  allow_implicit_invocation: true
