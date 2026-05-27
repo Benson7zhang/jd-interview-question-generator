@@ -37,26 +37,78 @@ JD + Resume
 
 ## 安装
 
-将本仓库放到 Codex skills 目录中，例如：
+推荐使用 `npx skills` 一键安装：
 
 ```bash
-mkdir -p ~/.agents/skills
-git clone git@github.com:Benson7zhang/intern-interview-predictor.git ~/.agents/skills/intern-interview-predictor
+npx skills add https://github.com/Benson7zhang/intern-interview-predictor -g --agent codex claude-code --skill intern-interview-predictor -y
 ```
 
-也可以通过 skills CLI 安装：
+安装完成后，重启 Codex / Claude Code，让客户端重新加载 skills。
 
-```bash
-npx skills add https://github.com/Benson7zhang/intern-interview-predictor -g --agent codex --skill intern-interview-predictor
-```
+## 快速开始
 
-然后在 Codex 中使用：
+在 Codex 或 Claude Code 中输入：
 
 ```text
-Use $intern-interview-predictor 根据下面这个 JD 和简历预测实习面试问题：
+Use $intern-interview-predictor
 
+请根据下面这个 JD 和我的简历，预测实习面试中最可能被问到的问题，并重点分析项目真实性风险。
+
+JD：
 [粘贴岗位 JD]
-[粘贴简历或项目经历]
+
+Resume：
+[粘贴简历、项目经历，或上传简历文件后说明]
+```
+
+## 输入格式
+
+效果最好的是同时提供 `JD + Resume`：
+
+```text
+JD：
+- 岗位名称：
+- 岗位职责：
+- 任职要求：
+- 加分项：
+
+Resume：
+- 教育背景：
+- 技术栈：
+- 项目经历：
+- 实习 / 比赛 / 开源：
+```
+
+也可以只提供其中一个：
+
+- 只有 JD：输出岗位信号、可能面试阶段、高概率问题和准备重点。
+- 只有简历：输出项目真实性深挖、简历风险点和可能被问到的问题。
+- JD + 简历：输出完整的招聘信号重建、匹配度分析、面试问题和淘汰风险。
+
+## 常用用法
+
+```text
+Use $intern-interview-predictor
+
+根据这个 JD 和我的简历，帮我预测一面会问什么。
+```
+
+```text
+Use $intern-interview-predictor
+
+重点深挖我的 RAG 项目，模拟面试官连续追问。
+```
+
+```text
+Use $intern-interview-predictor
+
+请分析这个岗位和我的简历匹配度，指出最危险的淘汰点。
+```
+
+```text
+Use $intern-interview-predictor
+
+我只有 JD，先帮我判断这个实习岗最可能考什么。
 ```
 
 ## 示例输入
